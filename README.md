@@ -22,3 +22,7 @@ LANGCHAIN_API_KEY=<your-api-key>
 
 Project name for tracing
 LANGCHAIN_PROJECT=pr-sparkling-passing-86
+
+## Links For Tuts and Dependencies
+[How to install LangChain packages](https://python.langchain.com/docs/how_to/installation/)
+[Build a simple LLM application with chat models and prompt templates](https://python.langchain.com/docs/tutorials/llm_chain/)
