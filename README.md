@@ -6,7 +6,14 @@ This project leverages LangChain to...
 
 This project requires Python 3.12.3. We recommend setting up a virtual environment before installing dependencies.
 
+### Prerequisites
+
+- Python 3.12.3
+- Conda (if using Conda for environment management)
+
 ### Using `venv`
+
+Set up and activate a virtual environment using `venv`:
 
 ```bash
 python3.12 -m venv .venv
@@ -20,6 +27,24 @@ If you prefer using `conda`, you can create and activate a conda environment:
 ```bash
 conda create --name researcher-env python=3.12.3
 conda activate researcher-env
+```
+
+### Using `environment.yaml`
+
+You can also set up the environment using the `environment.yaml` file provided in the repository:
+
+```bash
+conda env create -f environment.yaml
+conda activate researcher-env
+```
+
+### Deactivating the Environment
+
+To deactivate the virtual environment, use the following command:
+
+```bash
+deactivate  # For venv
+conda deactivate  # For conda
 ```
 
 ## Installing Dependencies
