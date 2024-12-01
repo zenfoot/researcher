@@ -72,6 +72,12 @@ from dotenv import load_dotenv
 load_dotenv()
 ```
 
+Install or upgrade langchain and langchain-openai packages:
+
+```bash
+pip install -U langchain langchain-openai
+```
+
 ## Usage
 
 Provide detailed instructions on how to use the project.
