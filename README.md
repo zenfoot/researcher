@@ -4,18 +4,30 @@ This project leverages LangChain to...
 
 ## Getting Started
 
-This project requires Python 3.12.3. We recommend setting up a virtual environment before installing dependencies:
+This project requires Python 3.12.3. We recommend setting up a virtual environment before installing dependencies.
+
+### Using `venv`
 
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
+### Using `conda`
+
+If you prefer using `conda`, you can create and activate a conda environment:
+
+```bash
+conda create --name researcher-env python=3.12.3
+conda activate researcher-env
+```
+
 ## Installing Dependencies
+
+Install the required dependencies from `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
-pip install langchain langchain-anthropic
 ```
 
 ### Optional Dependencies
