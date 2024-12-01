@@ -4,7 +4,7 @@ This project leverages LangChain to...
 
 ## Getting Started
 
-This project requires Python 3.12.3.  We recommend setting up a virtual environment before installing dependencies:
+This project requires Python 3.12.3. We recommend setting up a virtual environment before installing dependencies:
 
 ```bash
 python3.12 -m venv .venv
@@ -13,17 +13,24 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 ## Installing Dependencies
 
-```pip install -r requirements.txt```
+```bash
+pip install -r requirements.txt
+pip install langchain langchain-anthropic
+```
 
-```pip install langchain langchain-anthropic```
+### Optional Dependencies
 
-### Optional Dependeencies
+For serving the application (if applicable):
 
-For serving the application (if applicable)
-```pip install "langserve[all]"```
+```bash
+pip install "langserve[all]"
+```
 
-For using the LangChain CLI (if applicable)
-```pip install langchain-cli```
+For using the LangChain CLI (if applicable):
+
+```bash
+pip install langchain-cli
+```
 
 ## LangSmith Tracing (Optional, but Recommended)
 
@@ -48,18 +55,18 @@ pip install python-dotenv
 
 And in your Python code:
 
-```bash
+```python
 from dotenv import load_dotenv
 load_dotenv()
 ```
 
 ## Usage
 
-
+Provide detailed instructions on how to use the project.
 
 ## Examples
 
-
+Include examples of how to use the project.
 
 ## Tutorials and Resources
 
@@ -67,10 +74,10 @@ load_dotenv()
 
 [Build a simple LLM application with chat models and prompt templates](https://python.langchain.com/docs/tutorials/llm_chain/)
 
-## Contriibutting
+## Contributing
 
-
-
+Provide guidelines on how to contribute to the project.
 
 ## License
 
+MIT License
