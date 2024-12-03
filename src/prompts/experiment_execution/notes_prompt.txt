@@ -1,3 +1,5 @@
 # Prompt for updating experimental notes and observations.
 
-[Content of the prompt]
+Please modify `notes.txt` with a description of what each plot shows along with the filename of the figure. Please do so in-depth.
+
+Somebody else will be using `notes.txt` to write a report on this in the future.

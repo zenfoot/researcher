@@ -1,0 +1,13 @@
+Run {run_num} completed. Here are the results:
+
+{results}
+
+Decide if you need to re-plan your experiments given the result (you often will not need to).
+
+Someone else will be using `notes.txt` to perform a writeup on this in the future. Please include *all* relevant information for the writeup on Run {run_num}, including an experiment description and the run number. Be as verbose as necessary.
+
+Then, implement the next thing on your list. We will then run the command `python experiment.py --out_dir=run_{next_run_num}`.
+
+YOUR PROPOSED CHANGE MUST USE THIS COMMAND FORMAT, DO NOT ADD ADDITIONAL COMMAND LINE ARGS.
+
+If you are finished with experiments, respond with 'ALL_COMPLETED'.
