@@ -1,0 +1,3 @@
+# Prompt for generating code to create plots and figures.
+
+[Content of the prompt]

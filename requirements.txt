@@ -1,2 +1,7 @@
+# List of Python dependencies required for the project.
+
+# This file contains all Python packages needed to run the AI Scientist system.
+# It can be used with pip to install the dependencies.
+
 langchain
 langchain-anthropic

@@ -1,0 +1,3 @@
+# Prompt template for generating research ideas.
+
+[Content of the prompt]

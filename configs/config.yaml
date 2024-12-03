@@ -1,0 +1,7 @@
+# Central configuration file with settings like API keys and default parameters.
+
+# This YAML file stores configuration settings for the project, including:
+# - API keys (e.g., OpenAI API key, Semantic Scholar API key)
+# - Default values for agents (e.g., number of ideas to generate)
+# - Paths to data directories
+# Sensitive information should be securely managed.

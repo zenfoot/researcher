@@ -1,0 +1,3 @@
+# List of common writing errors to avoid in the report.
+
+[Content of the prompt]

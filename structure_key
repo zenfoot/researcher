@@ -1,0 +1,114 @@
+#  File Structure Diagram
+
+Researcher/                            # Root directory of the AI Scientist project
+├── README.md                          # Project overview, setup instructions, and usage examples
+├── requirements.txt                   # List of Python dependencies required for the project
+├── configs/
+│   └── config.yaml                    # Central configuration file with settings like API keys and default parameters
+├── data/
+│   ├── knowledge_base/                # Repository of knowledge and resources used by the agents
+│   ├── experimental_data/             # Stores data generated from experiments
+│   ├── experiments/                   # Contains experiment code, configurations, and scripts
+│   ├── experiment_runs/               # Data from individual experiment executions
+│   ├── latex/                         # LaTeX files and templates for report generation
+│   │   ├── template.tex               # LaTeX template for generating research reports
+│   │   ├── references.bib             # Bibliography file containing citation information
+│   │   └── README.md                  # Description of the LaTeX directory and its contents
+│   ├── papers/                        # Collection of research papers for analysis or reference
+│   └── fewshot_examples/              # Few-shot learning examples with PDFs and corresponding reviews
+│       ├── 132_automated_relational.pdf    # Example paper PDF
+│       ├── attention.pdf                   # Example paper PDF
+│       ├── 2_carpe_diem.pdf                # Example paper PDF
+│       ├── 132_automated_relational.json   # Example paper review in JSON format
+│       ├── attention.json                  # Example paper review in JSON format
+│       └── 2_carpe_diem.json               # Example paper review in JSON format
+├── src/
+│   ├── __init__.py                      # Initializes the src package
+│   ├── main.py                          # Entry point of the application; initiates the orchestration agent
+│   ├── agents/
+│   │   ├── __init__.py                  # Initializes the agents package
+│   │   ├── constants.py                 # Defines constants used across agents for consistency
+│   │   ├── adaptive_orchestration_agent.py   # Coordinates the overall workflow among different agents
+│   │   ├── user_interaction_agent.py        # Manages interactions with the user
+│   │   ├── idea_generation_agent.py         # Generates innovative research ideas using language models
+│   │   ├── idea_reflection_agent.py         # Refines and improves generated ideas through reflection
+│   │   ├── knowledge_management_agent.py    # Manages knowledge resources and information retrieval
+│   │   ├── novelty_evaluation_agent.py      # Evaluates the novelty of ideas against existing literature
+│   │   ├── experiment_planning_agent.py     # Plans experiments to test the selected research idea
+│   │   ├── experiment_design_agent.py       # Designs detailed experimental procedures and setups
+│   │   ├── experiment_execution_agent.py    # Executes experiments and collects data
+│   │   ├── data_analysis_agent.py           # Analyzes experimental data and extracts meaningful insights
+│   │   ├── plotting_agent.py                # Generates plots and visualizations from experimental data
+│   │   ├── documentation_agent.py           # Manages documentation and experimental notes
+│   │   ├── reporting_agent.py               # Creates comprehensive research reports in LaTeX format
+│   │   ├── citation_management_agent.py     # Handles citations and bibliographic references in reports
+│   │   ├── error_checking_agent.py          # Checks for errors in documents and code; ensures quality
+│   │   ├── document_compilation_agent.py    # Compiles LaTeX documents into PDFs
+│   │   ├── peer_review_simulation_agent.py  # Simulates peer reviews for the research paper
+│   │   ├── review_generation_agent.py       # Generates peer reviews using language models
+│   │   ├── review_reflection_agent.py       # Refines reviews through iterative self-reflection
+│   │   ├── meta_review_agent.py             # Aggregates multiple reviews into a cohesive meta-review
+│   │   ├── improvement_agent.py             # Improves the research report based on review feedback
+│   │   └── resource_management_agent.py     # Manages computational resources for experiments
+│   ├── models/
+│   │   ├── __init__.py                      # Initializes the models package
+│   │   └── llm_provider.py                  # Provides interfaces to access language models (LLMs)
+│   ├── prompts/
+│   │   ├── __init__.py                      # Initializes the prompts package and provides utilities
+│   │   ├── idea_generation/
+│   │   │   ├── generation_prompt.txt        # Prompt template for generating research ideas
+│   │   │   └── reflection_prompt.txt        # Prompt template for reflecting and refining ideas
+│   │   ├── novelty_evaluation/
+│   │   │   ├── prompt.txt                   # Prompt for evaluating the novelty of ideas
+│   │   │   └── system_message.txt           # System message guiding the novelty evaluation agent
+│   │   ├── experiment_design/
+│   │   │   ├── design_prompt.txt            # Prompt for designing experiments based on ideas
+│   │   │   └── coder_prompt.txt             # Prompt for generating experiment code snippets
+│   │   ├── experiment_execution/
+│   │   │   ├── failure_prompt.txt           # Prompt for handling experiment failures and debugging
+│   │   │   ├── completion_prompt.txt        # Prompt for confirming successful experiment execution
+│   │   │   ├── timeout_prompt.txt           # Prompt for handling experiment timeouts
+│   │   │   ├── plotting_prompt.txt          # Prompt for generating code to create plots and figures
+│   │   │   └── notes_prompt.txt             # Prompt for updating experimental notes and observations
+│   │   ├── data_analysis/
+│   │   │   └── data_analysis_prompt.txt     # Prompt for analyzing experimental data and deriving insights
+│   │   ├── reporting/
+│   │   │   ├── abstract_prompt.txt          # Prompt for writing the abstract section of the report
+│   │   │   ├── section_prompt.txt           # Prompt for generating content for each report section
+│   │   │   ├── refinement_prompt.txt        # Prompt for refining report content for clarity and quality
+│   │   │   ├── second_refinement_prompt.txt # Secondary prompt for further refining report content
+│   │   │   ├── second_refinement_loop_prompt.txt # Loop prompt for iterative content refinement
+│   │   │   ├── per_section_tips.txt         # Tips and guidelines for writing each report section
+│   │   │   └── common_errors.txt            # List of common writing errors to avoid in the report
+│   │   ├── review_generation/
+│   │   │   ├── generation_prompt.txt        # Prompt for generating detailed peer reviews
+│   │   │   ├── system_prompt_base.txt       # Base system prompt for the review generation agent
+│   │   │   ├── system_prompt_neg.txt        # System prompt for generating critical reviews
+│   │   │   ├── system_prompt_pos.txt        # System prompt for generating positive reviews
+│   │   │   ├── reflection_prompt.txt        # Prompt for reviewers to reflect and improve their reviews
+│   │   │   ├── meta_system_prompt.txt       # System prompt for the meta-review aggregation agent
+│   │   │   └── improvement_prompt.txt       # Prompt for improving the report based on peer reviews
+│   │   ├── citation_management/
+│   │   │   ├── system_message.txt           # System message guiding the citation management agent
+│   │   │   ├── first_prompt.txt             # Initial prompt for identifying and adding citations
+│   │   │   ├── second_prompt.txt            # Follow-up prompt for refining citations and references
+│   │   │   └── aider_prompt_format.txt      # Format guidelines for assisting with citation formatting
+│   │   ├── misc/
+│   │   │   ├── template_instructions.txt    # Instructions for using the LaTeX report template
+│   │   │   └── other_prompts.txt            # Other miscellaneous prompts used across agents
+│   ├── utils/
+│   │   ├── __init__.py                      # Initializes the utils package
+│   │   ├── helpers.py                       # General helper functions used throughout the project
+│   │   ├── api_clients.py                   # Clients for interacting with external APIs (e.g., Semantic Scholar)
+│   │   ├── latex_utils.py                   # Utilities for handling LaTeX files and compilation processes
+│   │   ├── paper_loader.py                  # Functions for loading and processing research papers
+│   │   └── other_utils.py                   # Additional utility functions supporting various tasks
+│   ├── memory/
+│   │   ├── __init__.py                      # Initializes the memory package
+│   │   └── memory_manager.py                # Manages memory and state across agents during execution
+│   └── tests/
+│       ├── __init__.py                      # Initializes the tests package
+│       ├── test_agents.py                   # Unit tests for individual agents to ensure correctness
+│       └── test_workflow.py                 # Integration tests for the overall workflow of the system
+├── Dockerfile                               # Configuration file for containerizing the application with Docker
+└── .gitignore                               # Lists files and directories for Git to ignore (e.g., `__pycache__`, `.env`)

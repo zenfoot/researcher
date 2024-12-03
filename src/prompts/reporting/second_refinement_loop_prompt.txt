@@ -1,0 +1,3 @@
+# Loop prompt for iterative content refinement.
+
+[Content of the prompt]
