@@ -1,0 +1,11 @@
+We've provided the `latex/template.tex` file to the project. We will be filling it in section by section.
+
+First, please fill in the "Title" and "Abstract" sections of the writeup.
+
+Some tips are provided below:
+
+{tips}
+
+Before every paragraph, please include a brief description of what you plan to write in that paragraph in a comment.
+
+Be sure to first name the file and use *SEARCH/REPLACE* blocks to perform these edits.
