@@ -27,3 +27,10 @@ Pay attention to any accidental uses of HTML syntax, e.g., </end instead of \\en
             corrections = self.llm.predict(prompt)
             # Apply corrections to the LaTeX file
             pass  # Implement file I/O to update draft
+
+
+# class ErrorCheckingAgent:
+#     def check_and_fix_errors(self, report_path):
+#         # Check for common LaTeX errors
+#         # Implement error checking and fixing
+#         print("Checking for errors...")

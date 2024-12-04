@@ -39,3 +39,18 @@ class ExperimentPlanningAgent:
         experiments = []
         # Parsing logic to populate the experiments list based on response
         return experiments
+
+
+# from models.llm_provider import get_llm
+# from prompts import load_prompt
+
+# class ExperimentPlanningAgent:
+#     def __init__(self, idea):
+#         self.llm = get_llm()
+#         self.prompt_template = load_prompt('experiment_design_prompt.txt')
+#         self.idea = idea
+
+#     def design_experiment(self):
+#         prompt = self.prompt_template.format(idea=self.idea)
+#         plan = self.llm.predict(prompt)
+#         return plan

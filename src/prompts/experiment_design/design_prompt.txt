@@ -1,0 +1,5 @@
+Design an experiment to test the following idea:
+
+{idea}
+
+Provide detailed methodology, required resources, and expected outcomes.

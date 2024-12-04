@@ -5,3 +5,16 @@
 
 langchain
 langchain-anthropic
+
+openai
+tiktoken
+python-dotenv
+numpy
+pandas
+PyPDF2
+PyMuPDF
+requests
+backoff
+chroma
+scipy
+matplotlib

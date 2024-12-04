@@ -31,3 +31,15 @@ class ImprovementAgent:
         prompt = self.improvement_prompt.format(report=report, review=json.dumps(review))
         improved_report = self.llm.predict(prompt)
         return improved_report
+
+
+# from models.llm_provider import get_llm
+
+# class ImprovementAgent:
+#     def __init__(self):
+#         self.llm = get_llm()
+
+#     def improve_report(self, report, review):
+#         prompt = f"Based on the following review, improve the research paper:\nReview:\n{review}\nPaper:\n{report}"
+#         improved_report = self.llm.predict(prompt)
+#         return improved_report

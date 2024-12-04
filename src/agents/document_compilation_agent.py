@@ -37,3 +37,10 @@ class DocumentCompilationAgent:
                 pass
         # Move the generated PDF to the output path
         pass  # Implement file movement logic
+
+
+# from utils.latex_utils import compile_latex
+
+# class DocumentCompilationAgent:
+#     def compile(self, latex_file_path, output_dir):
+#         compile_latex(latex_file_path, output_dir)

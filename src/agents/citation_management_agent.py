@@ -102,3 +102,23 @@ Abstract: {paper.get('abstract', 'No abstract available.')}"""
                 bib_entries.append(bib_entry)
         # Update references.bib and LaTeX draft
         pass  # Implement file I/O to add bib entries and update the draft
+
+
+# from models.llm_provider import get_llm
+# from utils.api_clients import SemanticScholarAPI
+
+# class CitationManagementAgent:
+#     def __init__(self, report_path):
+#         self.llm = get_llm()
+#         self.s2_api = SemanticScholarAPI()
+#         self.report_path = report_path
+
+#     def add_citations(self):
+#         # Read current report
+#         with open(self.report_path, 'r') as file:
+#             report_content = file.read()
+#         # Find places needing citations
+#         prompt = f"Identify statements in the following text that need citations:\n{report_content}"
+#         statements = self.llm.predict(prompt)
+#         # Search for relevant papers and add citations
+#         # Implement logic to insert citations

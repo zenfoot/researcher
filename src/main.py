@@ -14,3 +14,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# from agents.adaptive_orchestration_agent import AdaptiveOrchestrationAgent
+
+# def main():
+#     orchestrator = AdaptiveOrchestrationAgent()
+#     orchestrator.run()
+
+# if __name__ == "__main__":
+#     main()

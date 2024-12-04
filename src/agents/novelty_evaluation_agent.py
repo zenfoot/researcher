@@ -24,9 +24,6 @@ idea is novel or has been previously explored.
 #         return "Yes" in response
 
 
-##### **3. Novelty Evaluation Agent**
-
-
 from langchain.prompts import PromptTemplate
 from models.llm_provider import get_llm
 from utils.api_clients import SemanticScholarAPI
@@ -96,3 +93,25 @@ class NoveltyEvaluationAgent:
                 f"""{i+1}: {paper['title']}. {', '.join(author['name'] for author in paper['authors'])}. {paper.get('venue', 'Unknown Venue')}, {paper.get('year', 'n.d.')}.\nNumber of citations: {paper.get('citationCount', 0)}\nAbstract: {paper.get('abstract', 'No abstract available.')}"""
             )
         return "\n\n".join(paper_strings)
+
+
+# from models.llm_provider import get_llm
+# from utils.api_clients import SemanticScholarAPI
+
+# class NoveltyEvaluationAgent:
+#     def __init__(self):
+#         self.llm = get_llm()
+#         self.s2_api = SemanticScholarAPI()
+
+#     def evaluate_novelty(self, idea):
+#         papers = self.s2_api.search_papers(idea)
+#         if not papers:
+#             return True
+#         else:
+#             # Further evaluation with LLM
+#             prompt = f"Assess the novelty of the idea '{idea}' considering the following papers:\n"
+#             for paper in papers:
+#                 prompt += f"- {paper['title']} by {', '.join([author['name'] for author in paper['authors']])}\n"
+#             prompt += "Is the idea still considered novel? Yes or No."
+#             response = self.llm.predict(prompt)
+#             return 'Yes' in response

@@ -113,3 +113,17 @@ class ReviewGenerationAgent:
         except Exception as e:
             print(f"Error extracting JSON: {e}")
             return None
+
+
+# from models.llm_provider import get_llm
+# from utils.paper_loader import PaperLoader
+
+# class ReviewGenerationAgent:
+#     def __init__(self):
+#         self.llm = get_llm()
+
+#     def generate_review(self, paper_path):
+#         paper_text = PaperLoader.load_paper(paper_path)
+#         prompt = f"Write a peer review for the following paper:\n{paper_text}"
+#         review = self.llm.predict(prompt)
+#         return review

@@ -7,29 +7,51 @@
 #     return ChatOpenAI(model_name=model_name, temperature=temperature)
 
 
-import requests
+# import requests
+# import os
+# import backoff
+# import time
+
+# class SemanticScholarAPI:
+#     def __init__(self):
+#         self.api_key = os.getenv("S2_API_KEY")
+#         self.base_url = "https://api.semanticscholar.org/graph/v1"
+
+#     @backoff.on_exception(backoff.expo, requests.exceptions.HTTPError, max_tries=5)
+#     def search_papers(self, query, result_limit=10):
+#         if not query:
+#             return []
+#         response = requests.get(
+#             f"{self.base_url}/paper/search",
+#             headers={"X-API-KEY": self.api_key},
+#             params={
+#                 "query": query,
+#                 "limit": result_limit,
+#                 "fields": "title,authors,venue,year,abstract,citationCount"
+#             }
+#         )
+#         response.raise_for_status()
+#         results = response.json()
+#         return results.get('data', [])
+
+
 import os
+import requests
 import backoff
-import time
 
 class SemanticScholarAPI:
     def __init__(self):
-        self.api_key = os.getenv("S2_API_KEY")
-        self.base_url = "https://api.semanticscholar.org/graph/v1"
+        self.api_key = os.getenv('S2_API_KEY')
+        self.base_url = 'https://api.semanticscholar.org/graph/v1'
 
-    @backoff.on_exception(backoff.expo, requests.exceptions.HTTPError, max_tries=5)
-    def search_papers(self, query, result_limit=10):
-        if not query:
-            return []
-        response = requests.get(
-            f"{self.base_url}/paper/search",
-            headers={"X-API-KEY": self.api_key},
-            params={
-                "query": query,
-                "limit": result_limit,
-                "fields": "title,authors,venue,year,abstract,citationCount"
-            }
-        )
+    @backoff.on_exception(backoff.expo, requests.exceptions.RequestException, max_tries=5)
+    def search_papers(self, query, limit=5):
+        headers = {'x-api-key': self.api_key} if self.api_key else {}
+        params = {
+            'query': query,
+            'limit': limit,
+            'fields': 'title,authors,venue,year,abstract,citationCount,url,doi',
+        }
+        response = requests.get(f'{self.base_url}/paper/search', headers=headers, params=params)
         response.raise_for_status()
-        results = response.json()
-        return results.get('data', [])
+        return response.json().get('data', [])

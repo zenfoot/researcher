@@ -80,3 +80,11 @@ class ExperimentExecutionAgent:
                 shutil.rmtree(os.path.join(cwd, f"run_{run_num}"))
             next_prompt = self.timeout_prompt_template.format(timeout=timeout)
             return 1, next_prompt
+
+
+# class ExperimentExecutionAgent:
+#     def execute(self, plan):
+#         # Placeholder for experiment execution logic
+#         print("Executing experiment...")
+#         results = "Simulated experimental results."
+#         return results

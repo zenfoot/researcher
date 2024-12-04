@@ -106,3 +106,24 @@ class ReportingAgent:
         compile_latex(self.latex_template_path)
         # Handle any compilation errors with ErrorCheckingAgent
         pass
+
+
+# from models.llm_provider import get_llm
+# from prompts import load_prompt
+# import os
+
+# class ReportingAgent:
+#     def __init__(self, idea, analysis):
+#         self.llm = get_llm()
+#         self.idea = idea
+#         self.analysis = analysis
+#         self.latex_template_path = os.path.join('data', 'latex', 'template.tex')
+
+#     def create_report(self):
+#         # Generate the report content
+#         prompt = f"Write a research paper based on the idea '{self.idea}' and the analysis:\n{self.analysis}"
+#         report_content = self.llm.predict(prompt)
+#         # Save to LaTeX
+#         with open(self.latex_template_path, 'w') as file:
+#             file.write(report_content)
+#         return self.latex_template_path
