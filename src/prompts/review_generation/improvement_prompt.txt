@@ -1,0 +1,11 @@
+The following review has been created for your research paper:
+
+"{review}"
+
+Improve the text of your paper based on the review, focusing on addressing the weaknesses and questions raised, and enhancing the strengths. Ensure that the improved paper is clear, concise, and well-organized.
+
+Here is your original paper:
+
+"{report}"
+
+Provide the improved paper below.
