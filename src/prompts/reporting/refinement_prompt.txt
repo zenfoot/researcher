@@ -1,0 +1,5 @@
+You have written the '{section}' section as follows:
+
+{content}
+
+Please refine this section to improve clarity, coherence, and technical accuracy. Ensure that it adheres to academic writing standards. Provide the refined section below.

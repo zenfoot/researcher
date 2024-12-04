@@ -1,35 +1,13 @@
-Here are the ideas that you have already generated:
+You are tasked with reviewing the following research paper:
 
-{prev_ideas_string}
+{paper_text}
 
-Come up with the next impactful and creative idea for research experiments and directions you can feasibly investigate with the code provided.
+Write a detailed and critical review, discussing the paper's strengths and weaknesses, and provide constructive feedback. Your review should cover:
 
-Note that you will not have access to any additional resources or datasets.
-Make sure any idea does not overfit the specific training dataset or model, and has wider significance.
+- **Summary**: Briefly summarize the paper.
+- **Strengths**: Highlight the positive aspects.
+- **Weaknesses**: Critically assess the limitations and issues.
+- **Suggestions for Improvement**: Provide actionable recommendations.
+- **Recommendation**: Conclude with a clear acceptance or rejection recommendation.
 
-Respond in the following format:
-
-THOUGHT:
-<THOUGHT>
-
-NEW IDEA JSON:
-```json
-<JSON>
-
-In <THOUGHT>, first briefly discuss your intuitions and motivations for the idea. Detail your high-level plan, necessary design choices, and ideal outcomes of the experiments. Justify how the idea is different from the existing ones.
-
-In <JSON>, provide the new idea in JSON format with the following fields:
-
-"Name": A shortened descriptor of the idea, lowercase, no spaces, underscores allowed.
-"Title": A title for the idea, will be used for the report writing.
-
-"Experiment": An outline of the implementation.
-
-"Interestingness": A rating from 1 to 10 (lowest to highest).
-"Feasibility": A rating from 1 to 10 (lowest to highest).
-
-"Novelty": A rating from 1 to 10 (lowest to highest).
-
-Be cautious and realistic with your ratings.
-This JSON will be automatically parsed, so ensure the format is precise.
-You will have {num_reflections} rounds to iterate on the idea, but do not need to use them all.
+Please format your review in clear and professional language.

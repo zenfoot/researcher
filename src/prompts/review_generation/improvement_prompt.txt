@@ -9,3 +9,14 @@ Here is your original paper:
 "{report}"
 
 Provide the improved paper below.
+
+
+**** Alternatively ****
+
+The following review has been provided for your research paper:
+
+"{review}"
+
+Based on this review, revise and improve your paper to address the identified weaknesses and enhance the strengths. Ensure that you make substantial improvements and that the revised paper is well-organized, clear, and professionally written.
+
+Provide the improved LaTeX content below.

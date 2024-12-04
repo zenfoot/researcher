@@ -1,3 +1,9 @@
 # Tips and guidelines for writing each report section.
 
-[Content of the prompt]
+{
+    "Introduction": "Introduce the research topic, state the problem, and explain why it's important.",
+    "Methodology": "Describe the experiment design, procedures, and tools used.",
+    "Results": "Present the experimental results with supporting data and figures.",
+    "Discussion": "Interpret the results, discuss their implications, and relate them to existing research.",
+    "Conclusion": "Summarize the findings, state the significance, and suggest future research directions."
+}

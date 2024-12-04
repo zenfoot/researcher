@@ -1,5 +1,11 @@
-Design an experiment to test the following idea:
+Design a detailed experiment to test the following research idea:
 
-{idea}
+"{idea}"
 
-Provide detailed methodology, required resources, and expected outcomes.
+Include the following sections:
+- **Objective**: What are you trying to achieve?
+- **Methodology**: Detailed steps and procedures.
+- **Required Resources**: Data, tools, and equipment needed.
+- **Expected Outcomes**: What do you anticipate finding?
+
+Provide the experiment plan in a clear and structured format.

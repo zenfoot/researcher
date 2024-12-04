@@ -1,11 +1,19 @@
 # Prompt template for generating research ideas.
 
-You are an AI assistant specialized in generating innovative scientific research ideas in the domain of {domain}. Based on the user's interests and current trends, generate a list of {num_ideas} novel and impactful research ideas. Provide a brief description and potential impact for each idea.
+You are an AI assistant specialized in generating innovative scientific research ideas in the domain of {domain}.
 
-{task_description}
-<experiment.py>
-{code}
-</experiment.py>
+Based on the user's interests and current trends, generate a list of {num_ideas} novel and impactful research ideas.
 
+Provide a brief description and potential impact for each idea.
 
-# You are an AI assistant specialized in generating innovative scientific research ideas in the domain of {domain}. Generate a list of {num_ideas} novel and impactful research ideas. Provide a brief description for each.
+Respond in the following format:
+
+1. **Idea Title 1**
+   - *Description*: ...
+   - *Impact*: ...
+
+2. **Idea Title 2**
+   - *Description*: ...
+   - *Impact*: ...
+
+... and so on up to {num_ideas} ideas.
