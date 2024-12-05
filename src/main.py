@@ -44,11 +44,14 @@ Dependencies:
 """
 
 import logging
+import os
 from agents.adaptive_orchestration_agent import AdaptiveOrchestrationAgent
 
-logging.basicConfig(level=logging.INFO)
+# Configure logging level from environment variable or default to INFO
+logging_level = os.getenv('LOGGING_LEVEL', 'INFO').upper()
+logging.basicConfig(level=logging_level)
 
-def main():
+def main() -> None:
     """
     Initialize and run the Researcher system's main workflow.
     
@@ -66,9 +69,15 @@ def main():
     """
     orchestrator = AdaptiveOrchestrationAgent()
     try:
+        logging.info("Starting the orchestration agent.")
         orchestrator.run()
+        logging.info("Orchestration agent finished successfully.")
+    except ValueError as ve:
+        logging.error(f"Value error occurred: {ve}")
+    except IOError as ioe:
+        logging.error(f"I/O error occurred: {ioe}")
     except Exception as e:
-        logging.error(f"An error occurred while running the orchestration agent: {e}")
+        logging.error(f"An unexpected error occurred: {e}")
 
 if __name__ == "__main__":
     main()
