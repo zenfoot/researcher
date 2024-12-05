@@ -43,8 +43,10 @@ Dependencies:
 - agents.adaptive_orchestration_agent.AdaptiveOrchestrationAgent
 """
 
-
+import logging
 from agents.adaptive_orchestration_agent import AdaptiveOrchestrationAgent
+
+logging.basicConfig(level=logging.INFO)
 
 def main():
     """
@@ -63,7 +65,10 @@ def main():
         Initiates the orchestration agent and its associated processes
     """
     orchestrator = AdaptiveOrchestrationAgent()
-    orchestrator.run()
+    try:
+        orchestrator.run()
+    except Exception as e:
+        logging.error(f"An error occurred while running the orchestration agent: {e}")
 
 if __name__ == "__main__":
     main()
