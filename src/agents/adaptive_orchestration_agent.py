@@ -35,33 +35,33 @@ class AdaptiveOrchestrationAgent(BaseAgent):
     """Orchestrates the entire AI Scientist workflow by coordinating agents."""
 
     def __init__(self, domain: str = None, num_ideas: int = 3):
-        self.logger = logging.getLogger(self.__class__.__name__)
-        self.domain = domain
-        self.num_ideas = num_ideas
-        self.llm = get_llm()
-        self.initialize_agents()
+        self.logger      = logging.getLogger(self.__class__.__name__)
+        self.domain      = domain
+        self.num_ideas   = num_ideas
+        self.llm         = get_llm()
+        self.initialize_agents()   
 
     def initialize_agents(self):
         """Initializes all the agents used in the workflow."""
         self.logger.info("Initializing agents.")
-        self.user_agent = UserInteractionAgent()
-        self.idea_agent = IdeaGenerationAgent(domain=self.domain, num_ideas=self.num_ideas)
+        self.user_agent                 = UserInteractionAgent()
+        self.idea_agent                 = IdeaGenerationAgent(domain=self.domain, num_ideas=self.num_ideas)
         # IdeaReflectionAgent will be instantiated during the reflection phase
-        self.novelty_agent = NoveltyEvaluationAgent()
-        self.resource_manager = ResourceManagementAgent()
-        self.data_analysis_agent = DataAnalysisAgent()
-        self.citation_manager = CitationManagementAgent()
-        self.error_checker = ErrorCheckingAgent()
+        self.novelty_agent              = NoveltyEvaluationAgent()
+        self.resource_manager           = ResourceManagementAgent()
+        self.data_analysis_agent        = DataAnalysisAgent()
+        self.citation_manager           = CitationManagementAgent()
+        self.error_checker              = ErrorCheckingAgent()
         self.document_compilation_agent = DocumentCompilationAgent()
-        self.review_generation_agent = ReviewGenerationAgent()
-        self.improvement_agent = ImprovementAgent()
+        self.review_generation_agent    = ReviewGenerationAgent()
+        self.improvement_agent          = ImprovementAgent()
         # Agents initialized as None will be created as needed
-        self.experiment_design_agent = None
-        self.experiment_planning_agent = None
+        self.experiment_design_agent    = None
+        self.experiment_planning_agent  = None
         self.experiment_execution_agent = None
-        self.reporting_agent = None
-        self.plotting_agent = None
-        self.documentation_agent = None
+        self.reporting_agent            = None
+        self.plotting_agent             = None
+        self.documentation_agent        = None
 
     def run(self):
         """Executes the full AI Scientist workflow."""
