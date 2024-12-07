@@ -32,7 +32,7 @@ from models.llm_provider import get_llm
 
 
 class AdaptiveOrchestrationAgent(BaseAgent):
-    """Orchestrates the entire AI Scientist workflow by coordinating agents."""
+    """Orchestrates the entire Researcher workflow by coordinating agents."""
 
     def __init__(self, domain: str = None, num_ideas: int = 3):
         self.logger      = logging.getLogger(self.__class__.__name__)
